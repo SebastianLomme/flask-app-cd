@@ -42,4 +42,4 @@ jobs:
         key: ${{secrets.SECRET_KEY}}
         port: 22
         script: |
-          ls $GITHUB_WORKSPACE/flask-app/.github/scripts/
+          ls $GITHUB_WORKSPACE/flask-app/
