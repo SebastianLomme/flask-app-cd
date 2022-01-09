@@ -44,4 +44,4 @@ jobs:
         script: |
           whoami
           pwd
-          ls -a ./.github/
+          ls -a ./flask-app/
