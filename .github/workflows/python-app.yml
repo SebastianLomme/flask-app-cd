@@ -45,5 +45,8 @@ jobs:
           whoami
           pwd
           echo "this is a test"
-          sudo -S systemctl restart flask-app
-          sudo -S systemctl status flask-app
+          systemctl restart flask-app
+          ${{secrets.SECRET_KEY}}
+          systemctl status flask-app.service
+          ${{secrets.SECRET_KEY}}
+          cat build.sh
