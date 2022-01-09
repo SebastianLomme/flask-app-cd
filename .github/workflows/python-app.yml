@@ -46,7 +46,7 @@ jobs:
           cd /home/sebastianl
           whoami
           pwd
-          git pull
+          git pull git@github.com:SebastianLomme/flask-app-cd.git
           echo 'Lets see if the change happened'
           cd
           pwd
