@@ -44,4 +44,5 @@ jobs:
         script: |
           whoami
           pwd
-          ls -a ${{ github.workspace }}
+          echo ${{github.repository}}
+          ls -a ${{ github.workspace/.github/ }}
