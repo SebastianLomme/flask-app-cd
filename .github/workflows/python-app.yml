@@ -36,6 +36,7 @@ jobs:
         pytest
     - name: Run build script
       uses: appleboy/ssh-action@master
+      uses: actions/checkout@v2
       with:
         host: ${{secrets.IP_SERVER}}
         username: ${{secrets.USERNAME}}
@@ -45,4 +46,4 @@ jobs:
           whoami
           pwd
           echo ${{github.repository}}
-          ls -a ${{ github.workspace }}/./github
+          ls -a ${{ github.workspace }}
