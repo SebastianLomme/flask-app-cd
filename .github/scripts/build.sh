@@ -1,5 +1,5 @@
 #!/bin/bash
 echo "the script was run"
-ssh sebastianl@${{secrets.IP_SERVER}}
+ssh sebastianl@188.166.49.249
 ${{secrets.SERVER_PASSWORD}}
-systemctl restart flask-app
+sudo systemctl restart flask-app
