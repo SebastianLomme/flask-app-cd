@@ -39,7 +39,7 @@ jobs:
       with:
         host: ${{secrets.IP_SERVER}}
         username: ${{secrets.USERNAME}}
-        key: ${{secrets.SERVER_PASSWORD}}
+        key: ${{secrets.SECRET_KEY}}
         port: 22
         script: |
           ls
