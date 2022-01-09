@@ -45,5 +45,5 @@ jobs:
           whoami
           pwd
           echo "this is a test"
-          sudo systemctl restart flask-app
-          sudo systemctl status flask-app
+          sudo systemctl restart flask-app -S
+          sudo systemctl status flask-app -S
