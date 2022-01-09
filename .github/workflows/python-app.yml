@@ -45,8 +45,8 @@ jobs:
           whoami
           pwd
           echo "this is a test"
-          systemctl restart flask-app
-          ${{secrets.SERVER_PASSWORD}}
-          systemctl status flask-app.service
-          ${{secrets.SERVER_PASSWORD}}
-          cat ./build.sh
+          # systemctl restart flask-app
+          # ${{secrets.SERVER_PASSWORD}}
+          # systemctl status flask-app.service
+          # ${{secrets.SERVER_PASSWORD}}
+          ls -a ./
