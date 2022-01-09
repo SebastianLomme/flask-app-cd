@@ -41,5 +41,5 @@ jobs:
         username: ${{secrets.USERNAME}}
         key: ${{secrets.SECRET_KEY}}
         port: 22
-        run: |
+        script: |
           sh ./build.sh
