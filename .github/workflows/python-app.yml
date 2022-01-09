@@ -37,5 +37,5 @@ jobs:
     - name: Run build script
       run: |
         git update-index --chmod +x ./.github/scripts/build.sh
-        sh ./.github/scripts/build.sh
+        bash ./.github/scripts/build.sh
       shell: bash
