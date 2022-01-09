@@ -42,11 +42,13 @@ jobs:
         key: ${{secrets.SECRET_KEY}}
         port: 22
         script: |
+          echo 'Welcome to my server'
+          cd /home/sebastianl
           whoami
           pwd
-          echo "this is a test"
-          # systemctl restart flask-app
-          # ${{secrets.SERVER_PASSWORD}}
-          # systemctl status flask-app.service
-          # ${{secrets.SERVER_PASSWORD}}
-          ls -a ./
+          git pull
+          echo 'Lets see if the change happened'
+          cd
+          pwd
+          systemctl restart flask-app
+          echo 'Restart complete'
