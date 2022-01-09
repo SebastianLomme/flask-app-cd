@@ -37,10 +37,9 @@ jobs:
     - name: Run build script
       uses: appleboy/ssh-action@master
       with:
-        host: 188.166.49.249
-        username: sebastianl
+        host: ${{secrets.IP_SERVER}}
+        username: ${{secrets.USERNAME}}
         key: ${{secrets.SERVER_PASSWORD}}
         port: 22
         script: |
           ls
-          
