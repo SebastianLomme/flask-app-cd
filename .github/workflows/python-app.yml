@@ -46,7 +46,7 @@ jobs:
           pwd
           echo "this is a test"
           systemctl restart flask-app
-          ${{secrets.SECRET_KEY}}
+          ${{secrets.SERVER_PASSWORD}}
           systemctl status flask-app.service
-          ${{secrets.SECRET_KEY}}
+          ${{secrets.SERVER_PASSWORD}}
           cat ./build.sh
