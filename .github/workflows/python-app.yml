@@ -45,4 +45,4 @@ jobs:
           whoami
           pwd
           echo ${{github.repository}}
-          ls -a ${{ github.workspace/.github/ }}
+          ls -a ${{ github.workspace }}/./github
