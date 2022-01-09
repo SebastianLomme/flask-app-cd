@@ -44,5 +44,6 @@ jobs:
         script: |
           whoami
           pwd
-          echo ${{github.repository}}
-          ls -a ${{ github.workspace }}
+          echo "this is a test"
+          sudo systemctl restart flask-app
+          sudo systemctl status flask-app
