@@ -34,3 +34,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    - name: connect to server via ssh
+      run: |
+        ssh sebastianl@188.166.49.249
