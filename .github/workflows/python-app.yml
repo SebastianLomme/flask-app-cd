@@ -44,4 +44,4 @@ jobs:
         script: |
           whoami
           pwd
-          ls -a $GITHUB_WORKSPACE/./
+          ls -a ./.github/
