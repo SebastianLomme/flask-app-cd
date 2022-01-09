@@ -35,5 +35,5 @@ jobs:
       run: |
         pytest
     - name: Run build script
-      run: sh .github/scripts/build.sh
+      run: sh build.sh
       shell: bash
