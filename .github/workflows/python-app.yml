@@ -43,10 +43,10 @@ jobs:
         port: 22
         script: |
           echo 'Welcome to my server'
-          cd /home/sebastianl
+          cd /home/sebastianl/flask-app-cd
           whoami
           pwd
-          git pull git@github.com:SebastianLomme/flask-app-cd.git
+          git pull
           echo 'Lets see if the change happened'
           cd
           pwd
