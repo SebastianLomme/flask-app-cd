@@ -42,13 +42,7 @@ jobs:
         key: ${{secrets.SECRET_KEY}}
         port: 22
         script: |
-          echo 'Welcome to my server'
           cd /home/sebastian/flask-app-cd
-          whoami
-          pwd
           git pull
-          echo 'Lets see if the change happened'
           cd
-          pwd
           sudo systemctl restart flask-app-cd
-          echo 'Restart complete'
