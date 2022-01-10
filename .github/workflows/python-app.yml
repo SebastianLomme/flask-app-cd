@@ -50,5 +50,5 @@ jobs:
           echo 'Lets see if the change happened'
           cd
           pwd
-          systemctl restart flask-app
+          sudo systemctl restart flask-app
           echo 'Restart complete'
