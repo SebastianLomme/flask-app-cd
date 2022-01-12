@@ -43,5 +43,4 @@ jobs:
         port: 22
         script: |
           ls -al ./flask-app-cd
-          ls -al ./flask-app-cd/.github/scripts/
-          sh ./flask-app-cd/.github/scripts/build.sh
+          ls -al ./flask-app-cd/.github/
