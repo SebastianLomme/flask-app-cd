@@ -42,5 +42,6 @@ jobs:
         key: ${{secrets.SECRET_KEY}}
         port: 22
         script: |
-          ls -l ../scripts/build.sh
-          sh ../scripts/build.sh
+          ls -l ../
+          ls -l ./
+          sh ./scripts/build.sh
