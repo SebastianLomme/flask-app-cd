@@ -42,6 +42,5 @@ jobs:
         key: ${{secrets.SECRET_KEY}}
         port: 22
         script: |
-          cd $GITHUB_WORKSPACE
-          cd flask-app-cd/.github/
+          cd $GITHUB_WORKSPACE/flask-app-cd/.github/
           ls -al
