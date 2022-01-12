@@ -43,5 +43,5 @@ jobs:
         port: 22
         script: |
           cd $GITHUB_WORKSPACE
-          cd flask-app-cd
+          cd flask-app-cd/.github/
           ls -al
