@@ -27,4 +27,5 @@ this repository is setup for continuous deploment this means that when you push 
 ```bash
     echo "user ALL=(ALL:ALL) NOPASSWD: /bin/systemctl restart flask-app"  >>  /etc/sudoers/sudoers.d/user
 ```
-- The third problom was, i trade making a build.sh file and running this script for all commands. I wanted te file to run from github. But kept getting errors for not finding the file. I solved the problom to use multiline commands 
+- The third problom was, i trade making a build.sh file and running this script for all commands. I wanted te file to run from github. But kept getting errors for not finding the file. I solved the problom to use multiline script
+
