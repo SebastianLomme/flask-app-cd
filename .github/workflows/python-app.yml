@@ -42,5 +42,7 @@ jobs:
         key: ${{secrets.SECRET_KEY}}
         port: 22
         script: |
-          cd /$GITHUB_WORKSPACE/flask-app-cd/.github/
-          ls -al /$GITHUB_WORKSPACE/flask-app-cd/
+          cd /home/sebastian/flask-app-cd
+          git pull
+          cd
+          sudo systemctl restart flask-app-cd
