@@ -19,13 +19,13 @@ this repository is setup for continuous deploment this means that when you push 
 - The second problom was that i did not want to give root acces to the cd. I made a new user. but then i couldn't run any more commands for sudo. The first solution was to give the user sudo access. And make sure it didn't require a password
 
 ```bash
-    echo "user ALL=(ALL:ALL) NOPASSWD:ALL"  >>  /etc/sudoers/sudoers.d/user
+    echo "user ALL=(ALL:ALL) NOPASSWD:ALL"  >>  /etc/sudoers.d/user
 ```
 
 - The problom now was that still all sudo commands could be used. So i changed it to only accept the systemctl restart flask-app command.
 
 ```bash
-    echo "user ALL=(ALL:ALL) NOPASSWD: /bin/systemctl restart flask-app"  >>  /etc/sudoers/sudoers.d/user
+    echo "user ALL=(ALL:ALL) NOPASSWD: /bin/systemctl restart flask-app"  >>  /etc/sudoers.d/user
 ```
 - The third problom was, i trade making a build.sh file and running this script for all commands. I wanted te file to run from github. But kept getting errors for not finding the file. I solved the problom to use multiline script
 
