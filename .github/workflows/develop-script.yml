@@ -43,6 +43,6 @@ jobs:
         port: 22
         script: |
           cd /home/sebastian/flask-app-cd
-          git pull
+          git pull https://github.com/SebastianLomme/flask-app-cd.git develop
           cd
           sudo systemctl restart flask-app-cd
