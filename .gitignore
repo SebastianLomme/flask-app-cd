@@ -1,5 +1,4 @@
 __pycache__/
 .pytest_cache/
 env/
-app/site.db
 app/__pycache__/
