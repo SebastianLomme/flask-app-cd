@@ -1,4 +1,4 @@
-from main import plus
+from app import plus
 
 
 def test_plus():
