@@ -44,5 +44,8 @@ jobs:
         script: |
           cd /home/sebastian/flask-app-cd
           git pull https://github.com/SebastianLomme/flask-app-cd.git develop
+          source env/bin/activate
+          pip install -r requirements.txt
+          deactivate
           cd
           sudo systemctl restart flask-app-cd
