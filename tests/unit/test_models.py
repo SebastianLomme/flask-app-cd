@@ -16,7 +16,7 @@ def test_validation_username(new_user):
 
 
 
-def test_add_user(app):
+def test_register_user(app):
     with app.test_client() as client:
         url = "/register"
         form = {
@@ -31,7 +31,7 @@ def test_add_user(app):
         print(response.data.decode('utf-8'))
         assert "This is the home page!" in response.data.decode("utf-8")
         assert "Account created for Peter Pannekoek" in response.data.decode("utf-8")
-
+        
 def test_db_peter(app):
     assert User.query.filter_by(username="Peter Pannekoek").first().username == "Peter Pannekoek"
 
