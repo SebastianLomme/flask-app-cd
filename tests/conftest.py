@@ -22,7 +22,6 @@ def new_user():
 @pytest.fixture(scope="module")
 def app():
     app = create_app(Config)
-    app.config['template_folder'] = '../templates'
     with app.app_context():
         db.create_all()
         yield app
