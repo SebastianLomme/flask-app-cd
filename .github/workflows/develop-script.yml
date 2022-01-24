@@ -30,24 +30,9 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: pytester-cov
-      id: pytester-cov
-      uses: alexanderdamiani/pytester-cov@v1.2.2
-      with:
-        pytest-root-dir: '.'
-        cov-omit-list: 'tests/*, main.py, setup.py'
-        cov-threshold-single: ${{ env.COVERAGE_SINGLE }}
-        cov-threshold-total: ${{ env.COVERAGE_TOTAL }}
-    - name: Coverage single fail - exit
-      if: ${{ steps.pytester-cov.outputs.cov-threshold-single-fail == 'true' }}
+    - name: Test with pytest
       run: |
-        echo "cov single fail ${{ steps.pytester-cov.outputs.cov-threshold-single-fail }}"
-        exit 1
-    - name: Coverage total fail - exit
-      if: ${{ steps.pytester-cov.outputs.cov-threshold-total-fail == 'true' }}
-      run: |
-        echo "cov single fail ${{ steps.pytester-cov.outputs.cov-threshold-total-fail }}"
-        exit 1
+        python -m pytest
     - name: Run build script
       uses: appleboy/ssh-action@master
       with:
