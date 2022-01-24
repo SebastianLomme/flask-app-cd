@@ -1,9 +1,7 @@
-from app import app, bcrypt
-
-def plus(num1, num2):
-    return num1 + num2
+from app import create_app, bcrypt
 
 
+app = create_app()
 if __name__ == "__main__":
     app.run()
     

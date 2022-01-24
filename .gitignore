@@ -3,3 +3,7 @@ __pycache__/
 env/
 app/__pycache__/
 app/site.db/
+.vscode/
+APP.egg-info
+build/
+.coverage

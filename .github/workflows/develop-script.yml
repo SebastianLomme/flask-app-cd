@@ -2,24 +2,23 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
 name: Python application
-
 on:
   push:
     branches: [ develop ]
   pull_request:
     branches: [ develop ]
-
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    env:
+      COVERAGE_SINGLE: 60
+      COVERAGE_TOTAL: 60
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.8.10
+    - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
-        python-version: "3.8.10"
+        python-version: "3.9"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -33,7 +32,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pytest
+        python -m pytest --cov=. --cov-fail-under=90
     - name: Run build script
       uses: appleboy/ssh-action@master
       with:
