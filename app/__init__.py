@@ -12,7 +12,7 @@ login_manager.login_view = "login"
 login_manager.login_message_category = "info"
 
 def create_app(config_class=Config):
-    app = Flask(__name__, template_folder='templates')
+    app = Flask(__name__)
     app.config.from_object(config_class)
     db.init_app(app)
     bcrypt.init_app(app)
