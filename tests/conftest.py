@@ -11,6 +11,7 @@ class Config:
     TESTING = True
     DEBUG = True
     WTF_CSRF_ENABLED = False
+    EXPLAIN_TEMPLATE_LOADING = True
 
 @pytest.fixture(scope="module")
 def new_user():
