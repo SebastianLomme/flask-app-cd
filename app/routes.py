@@ -6,7 +6,7 @@ from app.forms import RegistrationForm, LoginForm
 from app import bcrypt, db
 from flask_login import login_user, current_user, logout_user, login_required
 
-main = Blueprint("main", __name__)
+main = Blueprint("main", __name__,  template_folder='templates')
 
 @main.route("/")
 def home():
