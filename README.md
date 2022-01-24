@@ -3,6 +3,9 @@
 ![example workflows](https://github.com/SebastianLomme/flask-app-cd/actions/workflows/python-app.yml/badge.svg)
 [![Website monip.org](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)](http://167.99.35.30)
 
+main server ip: 167.99.35.30
+staging server ip: 167.71.74.5
+
 this repository is setup for continuous deploment this means that when you push a commit to the main branch the followings steps will be executed!
 - ubuntu environment is setup for tests
 - all dependencies are installed
