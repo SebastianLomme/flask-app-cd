@@ -32,7 +32,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: pytester-cov
       id: pytester-cov
-      uses: alexanderdamiani/pytester-cov@v1.2.0
+      uses: alexanderdamiani/pytester-cov@v1.2.1
       with:
         pytest-root-dir: '.'
         cov-omit-list: 'tests/*, main.py, setup.py'
