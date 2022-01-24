@@ -1,4 +1,3 @@
-from logging import captureWarnings
 from flask import render_template, url_for, flash, redirect, request, Blueprint
 from wtforms.validators import Email
 from app.models import User
@@ -6,7 +5,7 @@ from app.forms import RegistrationForm, LoginForm
 from app import bcrypt, db
 from flask_login import login_user, current_user, logout_user, login_required
 
-main = Blueprint("main", __name__,  template_folder='templates')
+main = Blueprint("main", __name__)
 
 @main.route("/")
 def home():

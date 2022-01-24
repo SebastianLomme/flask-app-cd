@@ -6,3 +6,4 @@ app/site.db/
 .vscode/
 APP.egg-info
 build/
+.coverage

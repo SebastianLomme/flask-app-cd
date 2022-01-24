@@ -13,6 +13,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      COVERAGE_SINGLE: 60
+      COVERAGE_TOTAL: 60
 
     steps:
     - uses: actions/checkout@v2
@@ -34,11 +37,22 @@ jobs:
     - name: Build package
       run: |
         pip install .
-    - name: Test with pytest
-      run: |
-        pwd
-        ls -al
-        python -m pytest
+    # - name: Test with pytest
+    #   run: |
+    #     python -m pytest
+    - name: pytester-cov
+      id: pytester-cov
+      uses: alexanderdamiani/pytester-cov@v1.2.0
+      with:
+        pytest-root-dir: '.'
+        # cov-omit-list: 'test/*, temp/main3.py, temp/main4.py'
+        cov-threshold-single: ${{ env.COVERAGE_SINGLE }}
+        cov-threshold-total: ${{ env.COVERAGE_TOTAL }}
+    - name: Commit pytest coverage table
+      uses: peter-evans/commit-comment@v1
+      with:
+        body: ${{ steps.pytester-cov.outputs.output-table }}
+
     - name: Run build script
       uses: appleboy/ssh-action@master
       with:
